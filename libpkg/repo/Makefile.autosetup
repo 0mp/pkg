@@ -1,0 +1,4 @@
+include @builddir@/mk/defs.mk
+DIRS=	binary
+include $(MK)/dir.mk
+

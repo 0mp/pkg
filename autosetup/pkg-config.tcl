@@ -95,6 +95,7 @@ proc pkg-config-init {{required 1}} {
 ## PKG_PANGO_LIBS    to the required libs (--libs-only-l)
 ## PKG_PANGO_LDFLAGS to the required linker flags (--libs-only-L)
 ## PKG_PANGO_CFLAGS  to the required compiler flags (--cflags)
+## PKG_PANGO_LIBS_STATIC to the required libs (--libs-only-l -static)
 #
 # If not found, returns 0.
 #
@@ -118,6 +119,7 @@ proc pkg-config {module args} {
 	define HAVE_${prefix}
 	define ${prefix}_VERSION $version
 	define ${prefix}_LIBS [exec pkg-config --libs-only-l $module]
+	define ${prefix}_LIBS_STATIC [exec pkg-config -static --libs-only-l $module]
 	define ${prefix}_LDFLAGS [exec pkg-config --libs-only-L $module]
 	define ${prefix}_CFLAGS [exec pkg-config --cflags $module]
 	return 1
