@@ -212,14 +212,14 @@ if {[pkg-config-init 0]} {
 		if {![pkg-config libldns]} {
 			user-error "Unable to find libldns"
 		} else {
-			define PKG_LIBDNS_LIBS_STATIC [exec pkg-config -static --libs-only-l libldns]
+			define PKG_LIBDNS_LIBS_STATIC [exec pkg-config --static --libs-only-l libldns]
 		}
 	}
 	if {[opt-bool with-libarchive.pc]} {
 		if {![pkg-config libarchive]} {
 			user-error "Unable to find libarchive"
 		} else {
-			define PKG_LIBARCHIVE_LIBS_STATIC [exec pkg-config -static --libs-only-l libarchive]
+			define PKG_LIBARCHIVE_LIBS_STATIC [exec pkg-config --static --libs-only-l libarchive]
 		}
 	}
 }
