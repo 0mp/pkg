@@ -119,7 +119,56 @@ proc pkg-config {module args} {
 	define HAVE_${prefix}
 	define ${prefix}_VERSION $version
 	define ${prefix}_LIBS [exec pkg-config --libs-only-l $module]
-	define ${prefix}_LIBS_STATIC [exec pkg-config -static --libs-only-l $module]
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch autosetup
+# Your branch is up to date with 'origin/autosetup'.
+#
+# Changes to be committed:
+#	modified:   auto.def
+#
+# Untracked files:
+#	..travis.yml.un~
+#	.Makefile.autosetup.un~
+#	.auto.def.un~
+#	autosetup/.pkg-config.tcl.un~
+#	config.h
+#	docs/.Makefile.autosetup.un~
+#	docs/.Makefile.un~
+#	external/libfetch/.Makefile.autosetup.un~
+#	external/libfetch/Makefile
+#	libpkg/.Makefile.autosetup.un~
+#	libpkg/.Makefile.un~
+#	mk/.common.mk.un~
+#	mk/.defs.mk.in.un~
+#	mk/.defs.mk.un~
+#	mk/.doc.mk.un~
+#	mk/doc.mk
+#	plop.tar.xz
+#	scripts/.Makefile.autosetup.un~
+#	scripts/.Makefile.un~
+#	src/.Makefile.autosetup.un~
+#	src/.Makefile.un~
+#	tests/.Makefile.autosetup.un~
+#	tests/Kyuafile
+#	tests/checksum
+#	tests/deps_formula
+#	tests/frontend/Kyuafile
+#	tests/frontend/add
+#	tests/frontend/alias
+#	tests/frontend/annotate
+#	tests/frontend/autoremove
+#	tests/frontend/autoupgrade
+#	tests/frontend/config
+#	tests/frontend/configmerge
+#	tests/frontend/conflicts
+#	tests/frontend/conflicts-multirepo
+#	tests/frontend/create
+#	tests/frontend/delete
+#	tests/frontend/extract
+#	tests/frontend/fingerprint
 	define ${prefix}_LDFLAGS [exec pkg-config --libs-only-L $module]
 	define ${prefix}_CFLAGS [exec pkg-config --cflags $module]
 	return 1
