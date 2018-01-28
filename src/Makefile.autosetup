@@ -52,9 +52,9 @@ LIBS=	\
 	-L$(top_builddir)/external/linenoise -llinenoise \
 	-L$(top_builddir)/libpkg/repo/binary -lrepo-binary \
 	-L$(top_builddir)/compat -lbsd_compat \
+	-L$(top_builddir)/external/libfetch -lfetch \
 	-L$(top_builddir)/libpkg -lpkg \
 	-lelf \
-	-lfetch \
 	-lm \
 	@EXTRA_LIBS@
 
