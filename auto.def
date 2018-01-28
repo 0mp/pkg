@@ -121,7 +121,11 @@ foreach fct $fatal_functions {
 }
 
 cc-with { -includes fcntl.h } {
-	cc-check-decls F_CLOSEM
+	if {[cc-check-decls F_CLOSEM]} {
+		define-feature f_closem 1
+	} else {
+		define-feature f_closem 0
+	}
 }
 
 cc-with { -includes sys/socket.h } {
