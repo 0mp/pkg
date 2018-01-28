@@ -64,7 +64,6 @@ scripts/sbin/pkg2ng
 /libpkg/repo/binary/Makefile
 /pkg_config.h
 /pkg_config.h.in
-/pkg_repos.h
 /scripts/Makefile
 /src/Makefile
 /test-driver
