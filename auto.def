@@ -161,6 +161,9 @@ cc-with { -libs { -lutil }} {
 cc-check-includes link.h machine/endian.h osreldate.h readpassphrase.h \
 	sys/procctl.h sys/statfs.h sys/statvfs.h libutil.h
 
+# for compat
+cc-check-includes dirent.h
+
 #endian stuff
 set headers [list endian.h sys/endian.h]
 foreach header $headers {
