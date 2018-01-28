@@ -62,7 +62,6 @@ __unused static const char rcsid[] = "$Sudo: closefrom.c,v 1.11 2006/08/17 15:26
 void
 closefrom(int lowfd)
 {
-/pkg_repos.2
     (void) fcntl(lowfd, F_CLOSEM, 0);
 }
 #else
